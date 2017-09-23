@@ -1,0 +1,24 @@
+{
+  "name": "lab-03-fs-async",
+  "version": "1.0.0",
+  "description": "![cf](https://i.imgur.com/7v5ASc8.png) lab-03-fs-readfile ======",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --fix **/lib && eslint --fix index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganrm/lab-03-fs-async.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meganrm/lab-03-fs-async/issues"
+  },
+  "homepage": "https://github.com/meganrm/lab-03-fs-async#readme",
+  "devDependencies": {
+    "expect": "^21.1.0",
+    "mocha": "^3.5.3"
+  }
+}
