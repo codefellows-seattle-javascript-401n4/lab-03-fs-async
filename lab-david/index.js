@@ -1,13 +1,19 @@
-const printFiles = require('./lib/print-files.js');
-const errorHandler = require('./lib/errorHandler.js');
+const readFiles = require('./lib/read-files.js');
 
-let filesToRead = ['one','two','three'];
+let filesToRead = ['one','two','three','one', 'one', 'two'];
 
-let handleInfo = (err, data) => {
-    if (err) throw errorHandler(err);
-    console.log(data);
+
+let getData = () => {
+
+    if (filesToRead.length === 0) return;
+    readFiles(`/${filesToRead[0]}.js`).then((data) => {
+        console.log(data);
+        filesToRead.splice(0, 1);
+        getData();
+    });
+
 };
 
-filesToRead.forEach((file) => {
-    printFiles(`/${file}.js`, handleInfo);
-});
+
+
+getData();
