@@ -1,0 +1,23 @@
+{
+  "name": "lab-03-fs-async",
+  "version": "1.0.0",
+  "description": "lab 03",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarDavis/lab-03-fs-async.git"
+  },
+  "keywords": [
+    "cf",
+    "lab"
+  ],
+  "author": "darryl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarDavis/lab-03-fs-async/issues"
+  },
+  "homepage": "https://github.com/DarDavis/lab-03-fs-async#readme"
+}
