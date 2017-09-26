@@ -38,3 +38,8 @@
   * hint read mocha docs    
 
 
+# MY DOCUMENTATION
+* print-files.js exports a single function named fileReader which takes a single parameter of a call back.
+* from the root directory if you run "node index.js ./data/data.txt ./data/data2.txt  ./data/data3.txt" it will console.log to you the data from the three text files
+* also if you run "mocha" from your command you will get two succesful tests run.  the first one will properly test for the data in all 3 files. the second wil properly return null when an exisiting data file isn't given. there are no false positives in my async testing. 
+* in both of the cases the files will be logged in the proper order. 
