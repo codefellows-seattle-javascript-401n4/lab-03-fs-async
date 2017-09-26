@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 
-//read in the files
+//read in files
 let readFiles = module.exports = (path, cb) => {
   return fs.readFile(__dirname + path, (err, data) => {
     if(err) {
