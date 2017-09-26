@@ -3,7 +3,7 @@
 const readFiles = require('./lib/print-files.js');
 
 //print the content of the files
-let printFile = module.exports = function(err, data) {
+let printFile = module.exports = (err, data) => {
   if(err) {console.log(err); }
   console.log(data.toString());
 };
