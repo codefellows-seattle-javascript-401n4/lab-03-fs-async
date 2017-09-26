@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('expect');
-const fileReader = require('./../lib/reader.js');
+const fileReader = require('./../lib/print-files.js');
 
 let textFiles = [__dirname + '/../data/data.txt', __dirname + '/../data/data2.txt', __dirname + '/../data/data3.txt'];
 
