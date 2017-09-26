@@ -6,7 +6,7 @@ const fileReader = require('./lib/print-files.js');
 // node index.js ./data/data.txt ./data/data2.txt  ./data/data3.txt
 
 fileReader((err, data) => {
-  if(err) console.log(err);
+  if(err) console.log(err.message);
   console.log(data);
 });
 
