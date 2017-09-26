@@ -1,0 +1,19 @@
+{
+  "name": "lab-larry",
+  "version": "1.0.0",
+  "description": "Lab03",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^3.5.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "LC",
+  "license": "ISC"
+}
