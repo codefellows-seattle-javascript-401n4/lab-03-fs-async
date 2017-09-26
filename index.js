@@ -2,7 +2,8 @@
 
 const fileReader = require('./lib/print-files.js');
 
-// let textFiles = [__dirname + '/data/data.txt', __dirname + '/data/data2.txt', __dirname + '/data/data3.txt'];
+// below you can copy and paste into the terminal to get things to run here 
+// node index.js ./data/data.txt ./data/data2.txt  ./data/data3.txt
 
 fileReader((err, data) => {
   if(err) console.log(err);
