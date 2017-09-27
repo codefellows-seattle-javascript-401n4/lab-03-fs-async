@@ -4,8 +4,8 @@
   "description": "![cf](https://i.imgur.com/7v5ASc8.png) lab-03-fs-readfile ======",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint --fix **/lib && eslint --fix index.js"
+    "test": "mocha",
+    "eslint": "eslint --fix lib/** && eslint --fix index.js"
   },
   "repository": {
     "type": "git",
