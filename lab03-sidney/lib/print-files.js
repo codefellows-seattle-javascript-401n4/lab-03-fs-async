@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 let readFile = module.exports = function (cb) {
-  console.log(process.argv);
+  // console.log(process.argv);
   cb = cb || function () {};
   fs.readFile(process.argv[2], (err, data) => {
     if (err) {
@@ -16,5 +16,5 @@ let readFile = module.exports = function (cb) {
   });
 };
 
-// readFile();
+// readFile(process.argv.slice(2));
 

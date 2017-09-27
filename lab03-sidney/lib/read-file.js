@@ -7,8 +7,8 @@ module.exports = {};
 fs.readFile(__dirname + '/../data/ipsum1.txt', (err, data) => {
   if (err) throw err;
 
-  console.log(data.toString());
-  
+  // console.log(data.toString());
+  fs.readFile();
   readSecondFile();
   readThirdFile();
 });
@@ -29,5 +29,3 @@ let readThirdFile = () => {
     console.log(data.toString());
   });
 };
-
-
