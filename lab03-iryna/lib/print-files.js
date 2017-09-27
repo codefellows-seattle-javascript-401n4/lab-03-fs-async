@@ -4,8 +4,7 @@ const fs = require('fs');
 
 module.exports = (filesPaths, cb) => {
   cb = cb || function(){};
-  if(!(filesPaths) instanceof Array)
-    return cb(New Error ("First parameter must be an array"));
+  if(!(filesPaths instanceof Array)) return cb(new Error ("First parameter must be an array"));
   let arrayToPrint = [];
   let counter = 0;
 
@@ -16,6 +15,6 @@ module.exports = (filesPaths, cb) => {
       arrayToPrint[index]=data.toString();
       counter++;
 
-      if(counter===filesPaths.length) cb(null, arrayToPrint);
+      if(counter === filesPaths.length) cb(null, arrayToPrint);
    }));
 };

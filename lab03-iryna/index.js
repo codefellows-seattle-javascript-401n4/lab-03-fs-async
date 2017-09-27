@@ -9,8 +9,6 @@ let filesToPrint = function(data){
 };
 
 readFiles(filesPaths, function(err, data) {
-  // console.log(err);
-  // console.log(data);
-
-  data.forEach((content)=>{filesToPrint(content)});
+  if (err === null) data.forEach((content)=>{filesToPrint(content)})
+  else filesToPrint(err);;
 });
