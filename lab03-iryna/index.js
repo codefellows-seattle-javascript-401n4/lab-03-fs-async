@@ -2,13 +2,15 @@
 
 
 const readFiles = require('./lib/print-files.js');
-// const paths = ['/file1.txt', '/file2.txt', '/file3.txt'];
+const filesPaths = ['lib/textFiles/file1.txt', 'lib/textFiles/file2.txt', 'lib/textFiles/file3.txt'];
 
 let filesToPrint = function(data){
     console.log(data.toString());
 };
 
-readFiles('/file1.txt', function(err, data) {
-  // console.log(data.toString());
-  filesToPrint(data);
+readFiles(filesPaths, function(err, data) {
+  // console.log(err);
+  // console.log(data);
+
+  data.forEach((content)=>{filesToPrint(content)});
 });
