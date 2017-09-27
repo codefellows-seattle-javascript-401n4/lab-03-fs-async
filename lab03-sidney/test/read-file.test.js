@@ -76,4 +76,25 @@ describe('readFile', function () {
 
 });
 
+describe('readFile', function () {
+  before(function() {
+    this.argvBackup = process.argv;
+    process.argv = [null, null, __dirname + '/../data/notfile.txt'];
+
+  });
+
+  after(function () {
+    process.argv = this.argvBackup;
+
+  });
+
+  it('should read an error', function (done) {
+    readFile((err) => {
+      expect(err).toBe((err));
+      done();
+    });
+
+  });
+
+});
 
