@@ -1,0 +1,16 @@
+{
+  "name": "lab-paula",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint"
+  },
+  "author": "Paula Mookerjee",
+  "license": "ISC",
+  "dependencies": {
+    "expect": "^21.1.0",
+    "mocha": "^3.5.3"
+  }
+}
