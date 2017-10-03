@@ -2,16 +2,31 @@
 
 const fs = require('fs');
 
-function readFiles(paths, callback){
+let printFiles = module.exports = function(paths, callback){
 
-  paths.forEach(function(path){
+  if(!paths instanceof Array){
+    return callback(new Error());
+  }
 
-    fs.readFile(__dirname + path, (err, data) => {
+  let dataArray = [];
+  let completed = 0;
 
-      if(err) throw err;
+  paths.map((path, index) => {
 
-    })
+    fs.readFile(path, (err, data) => {
 
+      if(err){
+        return callback(err);
+      }
+
+      dataArray[index] = data.toString();
+      completed++;
+
+      if(completed === paths.length){
+        callback(null, dataArray);
+      }
+
+    });
   });
 
 };
