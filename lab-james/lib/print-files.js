@@ -4,8 +4,8 @@ const fs = require('fs');
 
 let printFiles = module.exports = function(paths, callback){
 
-  if(!paths instanceof Array){
-    return callback(new Error());
+  if(!(paths instanceof Array)){
+    return callback(new Error('first paramter has to be an array'));
   }
 
   let dataArray = [];
