@@ -1,5 +1,13 @@
 'use strict';
 
+const fs = require ('fs');
+
+
+
+
+//not sure what this was so commented it out (think maybe from lecture?)
+/*'use strict';
+
 const fs = require('fs');
 
 let getContentsFrom = function(paths, callback) {
