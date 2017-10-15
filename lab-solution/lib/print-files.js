@@ -3,15 +3,14 @@
 const fs = require ('fs');
 
 let printFiles = (callback, paths) => {
+  module.exports = (paths) => fs.readFiles (paths, (err, data) => {
+    if (err) throw err;
+    console.log (data.toString());
+  }));
+};
 
-}
 
-
-
-
-
-
-printFiles();
+printFiles('.lib/testone.js', '.lib/testtwo.js', '.lib/testthree.js');
 
 //(paths, callbacks) => {}
 //(err, data) => {}

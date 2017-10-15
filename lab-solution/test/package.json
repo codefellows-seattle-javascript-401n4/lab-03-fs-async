@@ -1,0 +1,25 @@
+{
+  "name": "lab-03-fs-async",
+  "version": "1.0.0",
+  "description": "hello world",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namgungssi/lab-03-fs-async.git"
+  },
+  "keywords": [
+    "lab-03"
+  ],
+  "author": "Dalhun Namgung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namgungssi/lab-03-fs-async/issues"
+  },
+  "homepage": "https://github.com/namgungssi/lab-03-fs-async#readme"
+}
