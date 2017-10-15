@@ -2,7 +2,9 @@
 
 const fs = require ('fs');
 
-
+let printFiles = (callback, paths) => {
+  
+}
 
 
 //not sure what this was so commented it out (think maybe from lecture?)
