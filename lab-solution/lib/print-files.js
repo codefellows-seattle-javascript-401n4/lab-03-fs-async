@@ -5,8 +5,7 @@ const fs = require ('fs');
 let printFiles = (callback, paths) => {
   module.exports = (paths) => fs.readFiles (paths, (err, data) => {
     if (err) throw err;
-    console.log (data.toString());
-  }));
+  });
 };
 
 
