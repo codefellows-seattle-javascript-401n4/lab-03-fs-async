@@ -8,5 +8,9 @@ const paths = process.argv.slice(2);
 printFiles(paths, function(err, data){
   if(err){
     throw err;
+  } else {
+    data.forEach((content) => {
+      console.log(content);
+    });
   }
 });
