@@ -1,19 +1,21 @@
 {
   "name": "lab-03-fs-async",
   "version": "1.0.0",
-  "description": "hello world",
+  "description": "![cf](https://i.imgur.com/7v5ASc8.png) lab-03-fs-readfile ======",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/namgungssi/lab-03-fs-async.git"
   },
   "keywords": [
-    "lab-03"
+    "[]"
   ],
-  "author": "Dalhun Namgung",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/namgungssi/lab-03-fs-async/issues"
