@@ -1,67 +1,28 @@
 'use strict';
 
+
 const fs = require ('fs');
 
-let printFiles = (callback, paths) => {
-  module.exports = (paths) => fs.readFiles (paths, (err, data) => {
-    if (err) throw err;
-  });
-};
 
+let dataArray = [];
+let completed = 0;
+let printFiles = module.exports = function (callback, paths) {
+  if ! (paths instanceof Array)) {
+    return callback (new Error ('error must array'));
+  }
 
-printFiles('.lib/testone.js', '.lib/testtwo.js', '.lib/testthree.js');
-
-//(paths, callbacks) => {}
-//(err, data) => {}
-
-
-
-
-
-
-
-
-
-
-
-//not sure what this was so commented it out (think maybe from lecture?)
-/*'use strict';
-
-const fs = require('fs');
-
-let getContentsFrom = function(paths, callback) {
-
-    let err = false;
-
-    if( ! (paths instanceof Array && paths.length) || ! (callback instanceof Function) ) {
-
-      if( ! (callback instanceof Function) ) { callback = ()=>{}; }
-
-      err = "Invalid Input Parameters.  Expected array of paths and a callback";
-
+paths.map ((path, index) => {
+  fs.readFile (path, (error, data) => {
+    if (error) {
+      return callback (error);
     }
 
-    let contents = [];
+    dataArray [index] = data.toString ();
+    completed ++;
 
-    let getIt = function(paths, callback){
-
-      let path = paths.shift();
-
-      path && fs.readFile(path, function(err,data) {
-
-        if ( err ) { return callback(err); }
-
-        contents.push(data.toString());
-
-        return paths.length ? getIt(paths, callback) : callback(err, contents);
-
-      });
-
-    };
-
-    return err ? callback(err) : getIt(paths, callback);
-
+    if (completed === paths.length) {
+      callback (null, dataArray);
+    }
+  })
+})
 };
-
-
-module.exports.getContentsFrom = getContentsFrom;
