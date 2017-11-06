@@ -4,7 +4,7 @@
 1 verbose cli   'i',
 1 verbose cli   '--save',
 1 verbose cli   'dev',
-1 verbose cli   'mocha',
+1 verbose cli   'jest',
 1 verbose cli   'expect' ]
 2 info using npm@3.10.10
 3 info using node@v6.11.5
@@ -12,7 +12,7 @@
 5 silly install loadCurrentTree
 6 silly install readLocalPackageData
 7 silly fetchPackageMetaData dev
-8 silly fetchPackageMetaData mocha
+8 silly fetchPackageMetaData jest
 9 silly fetchPackageMetaData expect
 10 silly fetchNamedPackageData dev
 11 silly mapToRegistry name dev
@@ -27,19 +27,19 @@
 14 silly mapToRegistry   spec: 'latest',
 14 silly mapToRegistry   type: 'tag' }
 15 silly mapToRegistry uri https://registry.npmjs.org/dev
-16 silly fetchNamedPackageData mocha
-17 silly mapToRegistry name mocha
+16 silly fetchNamedPackageData jest
+17 silly mapToRegistry name jest
 18 silly mapToRegistry using default registry
 19 silly mapToRegistry registry https://registry.npmjs.org/
 20 silly mapToRegistry data Result {
-20 silly mapToRegistry   raw: 'mocha',
+20 silly mapToRegistry   raw: 'jest',
 20 silly mapToRegistry   scope: null,
-20 silly mapToRegistry   escapedName: 'mocha',
-20 silly mapToRegistry   name: 'mocha',
+20 silly mapToRegistry   escapedName: 'jest',
+20 silly mapToRegistry   name: 'jest',
 20 silly mapToRegistry   rawSpec: '',
 20 silly mapToRegistry   spec: 'latest',
 20 silly mapToRegistry   type: 'tag' }
-21 silly mapToRegistry uri https://registry.npmjs.org/mocha
+21 silly mapToRegistry uri https://registry.npmjs.org/jest
 22 silly fetchNamedPackageData expect
 23 silly mapToRegistry name expect
 24 silly mapToRegistry using default registry
@@ -55,377 +55,304 @@
 27 silly mapToRegistry uri https://registry.npmjs.org/expect
 28 verbose request uri https://registry.npmjs.org/dev
 29 verbose request no auth needed
-30 info attempt registry request try #1 at 12:36:50 PM
-31 verbose request id a6902020b0a9219d
-32 http request GET https://registry.npmjs.org/dev
-33 verbose request uri https://registry.npmjs.org/mocha
-34 verbose request no auth needed
-35 info attempt registry request try #1 at 12:36:50 PM
-36 http request GET https://registry.npmjs.org/mocha
-37 verbose request uri https://registry.npmjs.org/expect
-38 verbose request no auth needed
-39 info attempt registry request try #1 at 12:36:50 PM
-40 verbose etag W/"59f7b429-1333e"
-41 verbose lastModified Mon, 30 Oct 2017 23:22:17 GMT
-42 http request GET https://registry.npmjs.org/expect
-43 http 200 https://registry.npmjs.org/dev
-44 verbose headers { server: 'nginx/1.10.3',
-44 verbose headers   'content-type': 'application/json',
-44 verbose headers   'last-modified': 'Tue, 24 Oct 2017 21:43:16 GMT',
-44 verbose headers   etag: 'W/"59efb3f4-230e"',
-44 verbose headers   'content-encoding': 'gzip',
-44 verbose headers   'cache-control': 'max-age=300',
-44 verbose headers   'content-length': '1291',
-44 verbose headers   'accept-ranges': 'bytes',
-44 verbose headers   date: 'Mon, 06 Nov 2017 20:36:47 GMT',
-44 verbose headers   via: '1.1 varnish',
-44 verbose headers   age: '0',
-44 verbose headers   connection: 'keep-alive',
-44 verbose headers   'x-served-by': 'cache-sea1042-SEA',
-44 verbose headers   'x-cache': 'MISS',
-44 verbose headers   'x-cache-hits': '0',
-44 verbose headers   'x-timer': 'S1510000607.237768,VS0,VE76',
-44 verbose headers   vary: 'Accept-Encoding, Accept' }
-45 silly get cb [ 200,
-45 silly get   { server: 'nginx/1.10.3',
-45 silly get     'content-type': 'application/json',
-45 silly get     'last-modified': 'Tue, 24 Oct 2017 21:43:16 GMT',
-45 silly get     etag: 'W/"59efb3f4-230e"',
-45 silly get     'content-encoding': 'gzip',
-45 silly get     'cache-control': 'max-age=300',
-45 silly get     'content-length': '1291',
-45 silly get     'accept-ranges': 'bytes',
-45 silly get     date: 'Mon, 06 Nov 2017 20:36:47 GMT',
-45 silly get     via: '1.1 varnish',
-45 silly get     age: '0',
-45 silly get     connection: 'keep-alive',
-45 silly get     'x-served-by': 'cache-sea1042-SEA',
-45 silly get     'x-cache': 'MISS',
-45 silly get     'x-cache-hits': '0',
-45 silly get     'x-timer': 'S1510000607.237768,VS0,VE76',
-45 silly get     vary: 'Accept-Encoding, Accept' } ]
-46 verbose get saving dev to /Users/namgungssi/.npm/registry.npmjs.org/dev/.cache.json
-47 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-48 http 200 https://registry.npmjs.org/expect
-49 verbose headers { server: 'nginx/1.10.3',
-49 verbose headers   'content-type': 'application/json',
-49 verbose headers   'last-modified': 'Mon, 06 Nov 2017 09:40:02 GMT',
-49 verbose headers   etag: 'W/"5a002df2-14455"',
-49 verbose headers   'content-encoding': 'gzip',
-49 verbose headers   'cache-control': 'max-age=300',
-49 verbose headers   'content-length': '9505',
-49 verbose headers   'accept-ranges': 'bytes',
-49 verbose headers   date: 'Mon, 06 Nov 2017 20:36:47 GMT',
-49 verbose headers   via: '1.1 varnish',
-49 verbose headers   age: '263',
-49 verbose headers   connection: 'keep-alive',
-49 verbose headers   'x-served-by': 'cache-sea1023-SEA',
-49 verbose headers   'x-cache': 'HIT',
-49 verbose headers   'x-cache-hits': '1',
-49 verbose headers   'x-timer': 'S1510000607.237973,VS0,VE0',
-49 verbose headers   vary: 'Accept-Encoding, Accept' }
-50 silly get cb [ 200,
-50 silly get   { server: 'nginx/1.10.3',
-50 silly get     'content-type': 'application/json',
-50 silly get     'last-modified': 'Mon, 06 Nov 2017 09:40:02 GMT',
-50 silly get     etag: 'W/"5a002df2-14455"',
-50 silly get     'content-encoding': 'gzip',
-50 silly get     'cache-control': 'max-age=300',
-50 silly get     'content-length': '9505',
-50 silly get     'accept-ranges': 'bytes',
-50 silly get     date: 'Mon, 06 Nov 2017 20:36:47 GMT',
-50 silly get     via: '1.1 varnish',
-50 silly get     age: '263',
-50 silly get     connection: 'keep-alive',
-50 silly get     'x-served-by': 'cache-sea1023-SEA',
-50 silly get     'x-cache': 'HIT',
-50 silly get     'x-cache-hits': '1',
-50 silly get     'x-timer': 'S1510000607.237973,VS0,VE0',
-50 silly get     vary: 'Accept-Encoding, Accept' } ]
-51 verbose get saving expect to /Users/namgungssi/.npm/registry.npmjs.org/expect/.cache.json
+30 info attempt registry request try #1 at 12:37:44 PM
+31 verbose request id 2b0cc21fdfab54b6
+32 verbose etag W/"59efb3f4-230e"
+33 verbose lastModified Tue, 24 Oct 2017 21:43:16 GMT
+34 http request GET https://registry.npmjs.org/dev
+35 verbose request uri https://registry.npmjs.org/expect
+36 verbose request no auth needed
+37 info attempt registry request try #1 at 12:37:44 PM
+38 verbose etag W/"5a002df2-14455"
+39 verbose lastModified Mon, 06 Nov 2017 09:40:02 GMT
+40 http request GET https://registry.npmjs.org/expect
+41 verbose request uri https://registry.npmjs.org/jest
+42 verbose request no auth needed
+43 info attempt registry request try #1 at 12:37:44 PM
+44 verbose etag W/"59fb2b2c-28e2a"
+45 verbose lastModified Thu, 02 Nov 2017 14:26:52 GMT
+46 http request GET https://registry.npmjs.org/jest
+47 http 304 https://registry.npmjs.org/dev
+48 verbose headers { date: 'Mon, 06 Nov 2017 20:37:40 GMT',
+48 verbose headers   via: '1.1 varnish',
+48 verbose headers   'cache-control': 'max-age=300',
+48 verbose headers   etag: 'W/"59efb3f4-230e"',
+48 verbose headers   age: '54',
+48 verbose headers   connection: 'keep-alive',
+48 verbose headers   'x-served-by': 'cache-sea1032-SEA',
+48 verbose headers   'x-cache': 'HIT',
+48 verbose headers   'x-cache-hits': '1',
+48 verbose headers   'x-timer': 'S1510000661.930244,VS0,VE0',
+48 verbose headers   vary: 'Accept-Encoding, Accept' }
+49 silly get cb [ 304,
+49 silly get   { date: 'Mon, 06 Nov 2017 20:37:40 GMT',
+49 silly get     via: '1.1 varnish',
+49 silly get     'cache-control': 'max-age=300',
+49 silly get     etag: 'W/"59efb3f4-230e"',
+49 silly get     age: '54',
+49 silly get     connection: 'keep-alive',
+49 silly get     'x-served-by': 'cache-sea1032-SEA',
+49 silly get     'x-cache': 'HIT',
+49 silly get     'x-cache-hits': '1',
+49 silly get     'x-timer': 'S1510000661.930244,VS0,VE0',
+49 silly get     vary: 'Accept-Encoding, Accept' } ]
+50 verbose etag https://registry.npmjs.org/dev from cache
+51 verbose get saving dev to /Users/namgungssi/.npm/registry.npmjs.org/dev/.cache.json
 52 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-53 http 200 https://registry.npmjs.org/mocha
-54 verbose headers { server: 'nginx/1.10.1',
-54 verbose headers   'content-type': 'application/json',
-54 verbose headers   'last-modified': 'Wed, 01 Nov 2017 23:14:17 GMT',
-54 verbose headers   etag: 'W/"59fa5549-cad37"',
-54 verbose headers   'content-encoding': 'gzip',
-54 verbose headers   'cache-control': 'max-age=300',
-54 verbose headers   'content-length': '44529',
-54 verbose headers   'accept-ranges': 'bytes',
-54 verbose headers   date: 'Mon, 06 Nov 2017 20:36:47 GMT',
+53 http 304 https://registry.npmjs.org/expect
+54 verbose headers { date: 'Mon, 06 Nov 2017 20:37:40 GMT',
 54 verbose headers   via: '1.1 varnish',
-54 verbose headers   age: '282',
+54 verbose headers   'cache-control': 'max-age=300',
+54 verbose headers   etag: 'W/"5a002df2-14455"',
+54 verbose headers   age: '3',
 54 verbose headers   connection: 'keep-alive',
-54 verbose headers   'x-served-by': 'cache-sea1023-SEA',
+54 verbose headers   'x-served-by': 'cache-sea1042-SEA',
 54 verbose headers   'x-cache': 'HIT',
-54 verbose headers   'x-cache-hits': '4',
-54 verbose headers   'x-timer': 'S1510000607.244619,VS0,VE0',
+54 verbose headers   'x-cache-hits': '1',
+54 verbose headers   'x-timer': 'S1510000661.935531,VS0,VE1',
 54 verbose headers   vary: 'Accept-Encoding, Accept' }
-55 silly get cb [ 200,
-55 silly get   { server: 'nginx/1.10.1',
-55 silly get     'content-type': 'application/json',
-55 silly get     'last-modified': 'Wed, 01 Nov 2017 23:14:17 GMT',
-55 silly get     etag: 'W/"59fa5549-cad37"',
-55 silly get     'content-encoding': 'gzip',
-55 silly get     'cache-control': 'max-age=300',
-55 silly get     'content-length': '44529',
-55 silly get     'accept-ranges': 'bytes',
-55 silly get     date: 'Mon, 06 Nov 2017 20:36:47 GMT',
+55 silly get cb [ 304,
+55 silly get   { date: 'Mon, 06 Nov 2017 20:37:40 GMT',
 55 silly get     via: '1.1 varnish',
-55 silly get     age: '282',
+55 silly get     'cache-control': 'max-age=300',
+55 silly get     etag: 'W/"5a002df2-14455"',
+55 silly get     age: '3',
 55 silly get     connection: 'keep-alive',
-55 silly get     'x-served-by': 'cache-sea1023-SEA',
+55 silly get     'x-served-by': 'cache-sea1042-SEA',
 55 silly get     'x-cache': 'HIT',
-55 silly get     'x-cache-hits': '4',
-55 silly get     'x-timer': 'S1510000607.244619,VS0,VE0',
+55 silly get     'x-cache-hits': '1',
+55 silly get     'x-timer': 'S1510000661.935531,VS0,VE1',
 55 silly get     vary: 'Accept-Encoding, Accept' } ]
-56 verbose get saving mocha to /Users/namgungssi/.npm/registry.npmjs.org/mocha/.cache.json
-57 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-58 silly install normalizeTree
-59 silly loadCurrentTree Finishing
-60 silly loadIdealTree Starting
-61 silly install loadIdealTree
-62 silly cloneCurrentTree Starting
-63 silly install cloneCurrentTreeToIdealTree
-64 silly cloneCurrentTree Finishing
-65 silly loadShrinkwrap Starting
-66 silly install loadShrinkwrap
-67 silly loadShrinkwrap Finishing
-68 silly loadAllDepsIntoIdealTree Starting
-69 silly install loadAllDepsIntoIdealTree
-70 silly resolveWithNewModule dev@0.1.3 checking installable status
-71 silly cache add args [ 'dev', null ]
-72 verbose cache add spec dev
-73 silly resolveWithNewModule expect@21.2.1 checking installable status
-74 silly cache add args [ 'expect', null ]
-75 verbose cache add spec expect
-76 silly resolveWithNewModule mocha@4.0.1 checking installable status
-77 silly cache add args [ 'mocha', null ]
-78 verbose cache add spec mocha
-79 silly cache add parsed spec Result {
-79 silly cache add   raw: 'dev',
-79 silly cache add   scope: null,
-79 silly cache add   escapedName: 'dev',
-79 silly cache add   name: 'dev',
-79 silly cache add   rawSpec: '',
-79 silly cache add   spec: 'latest',
-79 silly cache add   type: 'tag' }
-80 silly addNamed dev@latest
-81 verbose addNamed "latest" is being treated as a dist-tag for dev
-82 info addNameTag [ 'dev', 'latest' ]
-83 silly mapToRegistry name dev
-84 silly mapToRegistry using default registry
-85 silly mapToRegistry registry https://registry.npmjs.org/
-86 silly mapToRegistry data Result {
-86 silly mapToRegistry   raw: 'dev',
-86 silly mapToRegistry   scope: null,
-86 silly mapToRegistry   escapedName: 'dev',
-86 silly mapToRegistry   name: 'dev',
-86 silly mapToRegistry   rawSpec: '',
-86 silly mapToRegistry   spec: 'latest',
-86 silly mapToRegistry   type: 'tag' }
-87 silly mapToRegistry uri https://registry.npmjs.org/dev
-88 verbose addNameTag registry:https://registry.npmjs.org/dev not in flight; fetching
-89 silly cache add parsed spec Result {
-89 silly cache add   raw: 'expect',
-89 silly cache add   scope: null,
-89 silly cache add   escapedName: 'expect',
-89 silly cache add   name: 'expect',
-89 silly cache add   rawSpec: '',
-89 silly cache add   spec: 'latest',
-89 silly cache add   type: 'tag' }
-90 silly addNamed expect@latest
-91 verbose addNamed "latest" is being treated as a dist-tag for expect
-92 info addNameTag [ 'expect', 'latest' ]
-93 silly mapToRegistry name expect
-94 silly mapToRegistry using default registry
-95 silly mapToRegistry registry https://registry.npmjs.org/
-96 silly mapToRegistry data Result {
-96 silly mapToRegistry   raw: 'expect',
-96 silly mapToRegistry   scope: null,
-96 silly mapToRegistry   escapedName: 'expect',
-96 silly mapToRegistry   name: 'expect',
-96 silly mapToRegistry   rawSpec: '',
-96 silly mapToRegistry   spec: 'latest',
-96 silly mapToRegistry   type: 'tag' }
-97 silly mapToRegistry uri https://registry.npmjs.org/expect
-98 verbose addNameTag registry:https://registry.npmjs.org/expect not in flight; fetching
-99 silly cache add parsed spec Result {
-99 silly cache add   raw: 'mocha',
-99 silly cache add   scope: null,
-99 silly cache add   escapedName: 'mocha',
-99 silly cache add   name: 'mocha',
-99 silly cache add   rawSpec: '',
-99 silly cache add   spec: 'latest',
-99 silly cache add   type: 'tag' }
-100 silly addNamed mocha@latest
-101 verbose addNamed "latest" is being treated as a dist-tag for mocha
-102 info addNameTag [ 'mocha', 'latest' ]
-103 silly mapToRegistry name mocha
-104 silly mapToRegistry using default registry
-105 silly mapToRegistry registry https://registry.npmjs.org/
-106 silly mapToRegistry data Result {
-106 silly mapToRegistry   raw: 'mocha',
-106 silly mapToRegistry   scope: null,
-106 silly mapToRegistry   escapedName: 'mocha',
-106 silly mapToRegistry   name: 'mocha',
-106 silly mapToRegistry   rawSpec: '',
-106 silly mapToRegistry   spec: 'latest',
-106 silly mapToRegistry   type: 'tag' }
-107 silly mapToRegistry uri https://registry.npmjs.org/mocha
-108 verbose addNameTag registry:https://registry.npmjs.org/mocha not in flight; fetching
-109 verbose get https://registry.npmjs.org/dev not expired, no request
-110 silly addNameTag next cb for dev with tag latest
-111 silly addNamed dev@0.1.3
-112 verbose addNamed "0.1.3" is a plain semver version for dev
-113 verbose get https://registry.npmjs.org/expect not expired, no request
-114 silly addNameTag next cb for expect with tag latest
-115 silly addNamed expect@21.2.1
-116 verbose addNamed "21.2.1" is a plain semver version for expect
-117 silly mapToRegistry name dev
-118 silly mapToRegistry using default registry
-119 silly mapToRegistry registry https://registry.npmjs.org/
-120 silly mapToRegistry data Result {
-120 silly mapToRegistry   raw: 'dev',
-120 silly mapToRegistry   scope: null,
-120 silly mapToRegistry   escapedName: 'dev',
-120 silly mapToRegistry   name: 'dev',
-120 silly mapToRegistry   rawSpec: '',
-120 silly mapToRegistry   spec: 'latest',
-120 silly mapToRegistry   type: 'tag' }
-121 silly mapToRegistry uri https://registry.npmjs.org/dev
-122 verbose addRemoteTarball https://registry.npmjs.org/dev/-/dev-0.1.3.tgz not in flight; adding
-123 verbose addRemoteTarball [ 'https://registry.npmjs.org/dev/-/dev-0.1.3.tgz',
-123 verbose addRemoteTarball   '89fdc08705e0e7eaef92d012e26751e4d744322a' ]
-124 verbose get https://registry.npmjs.org/mocha not expired, no request
-125 silly addNameTag next cb for mocha with tag latest
-126 silly addNamed mocha@4.0.1
-127 verbose addNamed "4.0.1" is a plain semver version for mocha
-128 silly mapToRegistry name mocha
-129 silly mapToRegistry using default registry
-130 silly mapToRegistry registry https://registry.npmjs.org/
-131 silly mapToRegistry data Result {
-131 silly mapToRegistry   raw: 'mocha',
-131 silly mapToRegistry   scope: null,
-131 silly mapToRegistry   escapedName: 'mocha',
-131 silly mapToRegistry   name: 'mocha',
-131 silly mapToRegistry   rawSpec: '',
-131 silly mapToRegistry   spec: 'latest',
-131 silly mapToRegistry   type: 'tag' }
-132 silly mapToRegistry uri https://registry.npmjs.org/mocha
-133 verbose addRemoteTarball https://registry.npmjs.org/mocha/-/mocha-4.0.1.tgz not in flight; adding
-134 verbose addRemoteTarball [ 'https://registry.npmjs.org/mocha/-/mocha-4.0.1.tgz',
-134 verbose addRemoteTarball   '0aee5a95cf69a4618820f5e51fa31717117daf1b' ]
-135 silly cache afterAdd expect@21.2.1
-136 verbose afterAdd /Users/namgungssi/.npm/expect/21.2.1/package/package.json not in flight; writing
-137 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-138 info retry fetch attempt 1 at 12:36:50 PM
-139 info attempt registry request try #1 at 12:36:50 PM
-140 http fetch GET https://registry.npmjs.org/mocha/-/mocha-4.0.1.tgz
-141 info retry fetch attempt 1 at 12:36:50 PM
-142 info attempt registry request try #1 at 12:36:50 PM
-143 http fetch GET https://registry.npmjs.org/dev/-/dev-0.1.3.tgz
-144 verbose afterAdd /Users/namgungssi/.npm/expect/21.2.1/package/package.json written
-145 http fetch 200 https://registry.npmjs.org/mocha/-/mocha-4.0.1.tgz
-146 http fetch 200 https://registry.npmjs.org/dev/-/dev-0.1.3.tgz
-147 silly fetchAndShaCheck shasum 89fdc08705e0e7eaef92d012e26751e4d744322a
-148 verbose addTmpTarball /var/folders/dl/wb_6cyb50gg6_k9h9dc6qp2w0000gn/T/npm-25992-2bc08fb8/registry.npmjs.org/dev/-/dev-0.1.3.tgz not in flight; adding
-149 verbose addTmpTarball already have metadata; skipping unpack for dev@0.1.3
-150 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-151 silly cache afterAdd dev@0.1.3
-152 verbose afterAdd /Users/namgungssi/.npm/dev/0.1.3/package/package.json not in flight; writing
-153 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-154 verbose afterAdd /Users/namgungssi/.npm/dev/0.1.3/package/package.json written
-155 silly fetchAndShaCheck shasum 0aee5a95cf69a4618820f5e51fa31717117daf1b
-156 verbose addTmpTarball /var/folders/dl/wb_6cyb50gg6_k9h9dc6qp2w0000gn/T/npm-25992-2bc08fb8/registry.npmjs.org/mocha/-/mocha-4.0.1.tgz not in flight; adding
-157 verbose addTmpTarball already have metadata; skipping unpack for mocha@4.0.1
-158 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-159 silly cache afterAdd mocha@4.0.1
-160 verbose afterAdd /Users/namgungssi/.npm/mocha/4.0.1/package/package.json not in flight; writing
-161 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-162 verbose afterAdd /Users/namgungssi/.npm/mocha/4.0.1/package/package.json written
-163 silly fetchNamedPackageData inotify
-164 silly mapToRegistry name inotify
-165 silly mapToRegistry using default registry
-166 silly mapToRegistry registry https://registry.npmjs.org/
-167 silly mapToRegistry data Result {
-167 silly mapToRegistry   raw: 'inotify',
-167 silly mapToRegistry   scope: null,
-167 silly mapToRegistry   escapedName: 'inotify',
-167 silly mapToRegistry   name: 'inotify',
-167 silly mapToRegistry   rawSpec: '',
-167 silly mapToRegistry   spec: 'latest',
-167 silly mapToRegistry   type: 'tag' }
-168 silly mapToRegistry uri https://registry.npmjs.org/inotify
-169 verbose request uri https://registry.npmjs.org/inotify
-170 verbose request no auth needed
-171 info attempt registry request try #1 at 12:36:50 PM
-172 http request GET https://registry.npmjs.org/inotify
-173 http 200 https://registry.npmjs.org/inotify
-174 verbose headers { server: 'nginx/1.10.1',
-174 verbose headers   'content-type': 'application/json',
-174 verbose headers   'last-modified': 'Sun, 10 Sep 2017 20:05:27 GMT',
-174 verbose headers   etag: 'W/"59b59b07-79fe"',
-174 verbose headers   'content-encoding': 'gzip',
-174 verbose headers   'cache-control': 'max-age=300',
-174 verbose headers   'content-length': '6053',
-174 verbose headers   'accept-ranges': 'bytes',
-174 verbose headers   date: 'Mon, 06 Nov 2017 20:36:47 GMT',
-174 verbose headers   via: '1.1 varnish',
-174 verbose headers   age: '0',
-174 verbose headers   connection: 'keep-alive',
-174 verbose headers   'x-served-by': 'cache-sea1023-SEA',
-174 verbose headers   'x-cache': 'MISS',
-174 verbose headers   'x-cache-hits': '0',
-174 verbose headers   'x-timer': 'S1510000608.667766,VS0,VE10',
-174 verbose headers   vary: 'Accept-Encoding, Accept' }
-175 silly get cb [ 200,
-175 silly get   { server: 'nginx/1.10.1',
-175 silly get     'content-type': 'application/json',
-175 silly get     'last-modified': 'Sun, 10 Sep 2017 20:05:27 GMT',
-175 silly get     etag: 'W/"59b59b07-79fe"',
-175 silly get     'content-encoding': 'gzip',
-175 silly get     'cache-control': 'max-age=300',
-175 silly get     'content-length': '6053',
-175 silly get     'accept-ranges': 'bytes',
-175 silly get     date: 'Mon, 06 Nov 2017 20:36:47 GMT',
-175 silly get     via: '1.1 varnish',
-175 silly get     age: '0',
-175 silly get     connection: 'keep-alive',
-175 silly get     'x-served-by': 'cache-sea1023-SEA',
-175 silly get     'x-cache': 'MISS',
-175 silly get     'x-cache-hits': '0',
-175 silly get     'x-timer': 'S1510000608.667766,VS0,VE10',
-175 silly get     vary: 'Accept-Encoding, Accept' } ]
-176 verbose get saving inotify to /Users/namgungssi/.npm/registry.npmjs.org/inotify/.cache.json
-177 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
-178 silly resolveWithNewModule inotify@1.4.2 checking installable status
-179 silly rollbackFailedOptional Starting
-180 silly rollbackFailedOptional Finishing
-181 silly runTopLevelLifecycles Finishing
-182 silly install printInstalled
-183 verbose stack Error: Unsupported platform for inotify@1.4.2: wanted {"name":"inotify","version":"1.4.2","author":{"name":"Camilo Aguilar","email":"camilo.aguilar@gmail.com"},"email":"camilo.aguilar@gmail.com","keywords":["inotify","watch","monitor","watch files","watch directories"],"license":"MIT","description":"inotify bindings for v8 javascript engine","repository":{"type":"git","url":"git+ssh://git@github.com/c4milo/node-inotify.git"},"os":["linux"],"engines":{"node":">=0.8"},"main":"inotify","dependencies":{"bindings":"^1.2.1","nan":"^2.3.3"},"scripts":{"test":"node-gyp configure build","install":"node-gyp rebuild"},"gypfile":true,"contributors":[{"name":"Adrian Estrada","email":"edsadr@gmail.com"},{"name":"Alexander Makarenko","email":"estliberitas@gmail.com"},{"name":"Brian Ingalls","email":"bingalls@compete.com"},{"name":"Brian White","email":"mscdex@mscdex.net"},{"name":"Camilo Aguilar","email":"camilo.aguilar@gmail.com"},{"name":"Dan VerWeire","email":"dverweire@gmail.com"},{"name":"FrozenCow","email":"frozencow@gmail.com"},{"name":"Michael Boe","email":"mschuylerb@gmail.com"},{"name":"Yannick Croissant","email":"k1der.country@free.fr"},{"name":"ikokostya","email":"ikokostya@gmail.com"}],"gitHead":"5feed6dc40be4a5d76ae9d30cf339e4f7d70ae54","bugs":{"url":"https://github.com/c4milo/node-inotify/issues"},"homepage":"https://github.com/c4milo/node-inotify#readme","_id":"inotify@1.4.2","_npmVersion":"5.3.0","_nodeVersion":"8.3.0","_npmUser":{"name":"c4milo","email":"camilo.aguilar@gmail.com"},"maintainers":[{"name":"camilo","email":"camilo@cloudescape.com"},{"name":"c4milo","email":"camilo.aguilar@gmail.com"}],"dist":{"integrity":"sha512-+dq8cO+Um/EiGujOilVGw1AclDq9V4B23z4I+PpytUlgIrWfOG/KxW4k7pRZwHHSoqUzlScCWYuQS8Wa+hYcXg==","shasum":"fd69d0f6e4a55005e338b3c1852fbb81acfb3ccc","tarball":"https://registry.npmjs.org/inotify/-/inotify-1.4.2.tgz"},"_npmOperationalInternal":{"host":"s3://npm-registry-packages","tmp":"tmp/inotify-1.4.2.tgz_1505073926403_0.6098344896454364"},"directories":{},"_from":"inotify@>= 0.1.6","_resolved":"https://registry.npmjs.org/inotify/-/inotify-1.4.2.tgz","_shasum":"fd69d0f6e4a55005e338b3c1852fbb81acfb3ccc","_requested":{"raw":"inotify@>= 0.1.6","scope":null,"escapedName":"inotify","name":"inotify","rawSpec":">= 0.1.6","spec":">=0.1.6","type":"range"},"_spec":"inotify@>= 0.1.6","_where":"/Users/namgungssi/Desktop/401/lab-03-fs-async/node_modules/dev","_args":[[{"raw":"inotify@>= 0.1.6","scope":null,"escapedName":"inotify","name":"inotify","rawSpec":">= 0.1.6","spec":">=0.1.6","type":"range"},"/Users/namgungssi/Desktop/401/lab-03-fs-async/node_modules/dev"]],"readme":"ERROR: No README data found!"} (current: {"os":"darwin","cpu":"x64"})
-183 verbose stack     at checkPlatform (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:45:14)
-183 verbose stack     at thenWarnEngineIssues (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:41:5)
-183 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
-183 verbose stack     at checkEngine (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:24:10)
-183 verbose stack     at module.exports.isInstallable (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:38:3)
-183 verbose stack     at resolveWithNewModule (/usr/local/lib/node_modules/npm/lib/install/deps.js:511:10)
-183 verbose stack     at /usr/local/lib/node_modules/npm/lib/install/deps.js:454:9
-183 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
-183 verbose stack     at /usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:37:12
-183 verbose stack     at addRequestedAndFinish (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:67:5)
-184 verbose pkgid inotify@1.4.2
-185 verbose cwd /Users/namgungssi/Desktop/401/lab-03-fs-async
-186 error Darwin 13.4.0
-187 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "--save" "dev" "mocha" "expect"
-188 error node v6.11.5
-189 error npm  v3.10.10
-190 error code EBADPLATFORM
-191 error notsup Unsupported platform for inotify@1.4.2: wanted {"os":"linux","arch":"any"} (current: {"os":"darwin","arch":"x64"})
-192 error notsup Valid OS:    linux
-192 error notsup Valid Arch:  any
-192 error notsup Actual OS:   darwin
-192 error notsup Actual Arch: x64
-193 verbose exit [ 1, true ]
+56 verbose etag https://registry.npmjs.org/expect from cache
+57 verbose get saving expect to /Users/namgungssi/.npm/registry.npmjs.org/expect/.cache.json
+58 verbose correctMkdir /Users/namgungssi/.npm correctMkdir already in flight; waiting
+59 http 200 https://registry.npmjs.org/jest
+60 verbose headers { server: 'nginx/1.10.1',
+60 verbose headers   'content-type': 'application/json',
+60 verbose headers   'last-modified': 'Mon, 06 Nov 2017 09:40:27 GMT',
+60 verbose headers   etag: 'W/"5a002e0b-2999c"',
+60 verbose headers   'content-encoding': 'gzip',
+60 verbose headers   'cache-control': 'max-age=300',
+60 verbose headers   'content-length': '16731',
+60 verbose headers   'accept-ranges': 'bytes',
+60 verbose headers   date: 'Mon, 06 Nov 2017 20:37:40 GMT',
+60 verbose headers   via: '1.1 varnish',
+60 verbose headers   age: '68',
+60 verbose headers   connection: 'keep-alive',
+60 verbose headers   'x-served-by': 'cache-sea1025-SEA',
+60 verbose headers   'x-cache': 'HIT',
+60 verbose headers   'x-cache-hits': '1',
+60 verbose headers   'x-timer': 'S1510000661.923452,VS0,VE0',
+60 verbose headers   vary: 'Accept-Encoding, Accept' }
+61 silly get cb [ 200,
+61 silly get   { server: 'nginx/1.10.1',
+61 silly get     'content-type': 'application/json',
+61 silly get     'last-modified': 'Mon, 06 Nov 2017 09:40:27 GMT',
+61 silly get     etag: 'W/"5a002e0b-2999c"',
+61 silly get     'content-encoding': 'gzip',
+61 silly get     'cache-control': 'max-age=300',
+61 silly get     'content-length': '16731',
+61 silly get     'accept-ranges': 'bytes',
+61 silly get     date: 'Mon, 06 Nov 2017 20:37:40 GMT',
+61 silly get     via: '1.1 varnish',
+61 silly get     age: '68',
+61 silly get     connection: 'keep-alive',
+61 silly get     'x-served-by': 'cache-sea1025-SEA',
+61 silly get     'x-cache': 'HIT',
+61 silly get     'x-cache-hits': '1',
+61 silly get     'x-timer': 'S1510000661.923452,VS0,VE0',
+61 silly get     vary: 'Accept-Encoding, Accept' } ]
+62 verbose get saving jest to /Users/namgungssi/.npm/registry.npmjs.org/jest/.cache.json
+63 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
+64 silly install normalizeTree
+65 silly loadCurrentTree Finishing
+66 silly loadIdealTree Starting
+67 silly install loadIdealTree
+68 silly cloneCurrentTree Starting
+69 silly install cloneCurrentTreeToIdealTree
+70 silly cloneCurrentTree Finishing
+71 silly loadShrinkwrap Starting
+72 silly install loadShrinkwrap
+73 silly loadShrinkwrap Finishing
+74 silly loadAllDepsIntoIdealTree Starting
+75 silly install loadAllDepsIntoIdealTree
+76 silly resolveWithNewModule expect@21.2.1 checking installable status
+77 silly cache add args [ 'expect', null ]
+78 verbose cache add spec expect
+79 silly resolveWithNewModule dev@0.1.3 checking installable status
+80 silly cache add args [ 'dev', null ]
+81 verbose cache add spec dev
+82 silly resolveWithNewModule jest@21.2.1 checking installable status
+83 silly cache add args [ 'jest', null ]
+84 verbose cache add spec jest
+85 silly cache add parsed spec Result {
+85 silly cache add   raw: 'expect',
+85 silly cache add   scope: null,
+85 silly cache add   escapedName: 'expect',
+85 silly cache add   name: 'expect',
+85 silly cache add   rawSpec: '',
+85 silly cache add   spec: 'latest',
+85 silly cache add   type: 'tag' }
+86 silly addNamed expect@latest
+87 verbose addNamed "latest" is being treated as a dist-tag for expect
+88 info addNameTag [ 'expect', 'latest' ]
+89 silly mapToRegistry name expect
+90 silly mapToRegistry using default registry
+91 silly mapToRegistry registry https://registry.npmjs.org/
+92 silly mapToRegistry data Result {
+92 silly mapToRegistry   raw: 'expect',
+92 silly mapToRegistry   scope: null,
+92 silly mapToRegistry   escapedName: 'expect',
+92 silly mapToRegistry   name: 'expect',
+92 silly mapToRegistry   rawSpec: '',
+92 silly mapToRegistry   spec: 'latest',
+92 silly mapToRegistry   type: 'tag' }
+93 silly mapToRegistry uri https://registry.npmjs.org/expect
+94 verbose addNameTag registry:https://registry.npmjs.org/expect not in flight; fetching
+95 silly cache add parsed spec Result {
+95 silly cache add   raw: 'dev',
+95 silly cache add   scope: null,
+95 silly cache add   escapedName: 'dev',
+95 silly cache add   name: 'dev',
+95 silly cache add   rawSpec: '',
+95 silly cache add   spec: 'latest',
+95 silly cache add   type: 'tag' }
+96 silly addNamed dev@latest
+97 verbose addNamed "latest" is being treated as a dist-tag for dev
+98 info addNameTag [ 'dev', 'latest' ]
+99 silly mapToRegistry name dev
+100 silly mapToRegistry using default registry
+101 silly mapToRegistry registry https://registry.npmjs.org/
+102 silly mapToRegistry data Result {
+102 silly mapToRegistry   raw: 'dev',
+102 silly mapToRegistry   scope: null,
+102 silly mapToRegistry   escapedName: 'dev',
+102 silly mapToRegistry   name: 'dev',
+102 silly mapToRegistry   rawSpec: '',
+102 silly mapToRegistry   spec: 'latest',
+102 silly mapToRegistry   type: 'tag' }
+103 silly mapToRegistry uri https://registry.npmjs.org/dev
+104 verbose addNameTag registry:https://registry.npmjs.org/dev not in flight; fetching
+105 silly cache add parsed spec Result {
+105 silly cache add   raw: 'jest',
+105 silly cache add   scope: null,
+105 silly cache add   escapedName: 'jest',
+105 silly cache add   name: 'jest',
+105 silly cache add   rawSpec: '',
+105 silly cache add   spec: 'latest',
+105 silly cache add   type: 'tag' }
+106 silly addNamed jest@latest
+107 verbose addNamed "latest" is being treated as a dist-tag for jest
+108 info addNameTag [ 'jest', 'latest' ]
+109 silly mapToRegistry name jest
+110 silly mapToRegistry using default registry
+111 silly mapToRegistry registry https://registry.npmjs.org/
+112 silly mapToRegistry data Result {
+112 silly mapToRegistry   raw: 'jest',
+112 silly mapToRegistry   scope: null,
+112 silly mapToRegistry   escapedName: 'jest',
+112 silly mapToRegistry   name: 'jest',
+112 silly mapToRegistry   rawSpec: '',
+112 silly mapToRegistry   spec: 'latest',
+112 silly mapToRegistry   type: 'tag' }
+113 silly mapToRegistry uri https://registry.npmjs.org/jest
+114 verbose addNameTag registry:https://registry.npmjs.org/jest not in flight; fetching
+115 verbose get https://registry.npmjs.org/expect not expired, no request
+116 silly addNameTag next cb for expect with tag latest
+117 silly addNamed expect@21.2.1
+118 verbose addNamed "21.2.1" is a plain semver version for expect
+119 verbose get https://registry.npmjs.org/dev not expired, no request
+120 silly addNameTag next cb for dev with tag latest
+121 silly addNamed dev@0.1.3
+122 verbose addNamed "0.1.3" is a plain semver version for dev
+123 verbose get https://registry.npmjs.org/jest not expired, no request
+124 silly addNameTag next cb for jest with tag latest
+125 silly addNamed jest@21.2.1
+126 verbose addNamed "21.2.1" is a plain semver version for jest
+127 silly cache afterAdd expect@21.2.1
+128 verbose afterAdd /Users/namgungssi/.npm/expect/21.2.1/package/package.json not in flight; writing
+129 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
+130 silly cache afterAdd dev@0.1.3
+131 verbose afterAdd /Users/namgungssi/.npm/dev/0.1.3/package/package.json not in flight; writing
+132 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
+133 silly cache afterAdd jest@21.2.1
+134 verbose afterAdd /Users/namgungssi/.npm/jest/21.2.1/package/package.json not in flight; writing
+135 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
+136 verbose afterAdd /Users/namgungssi/.npm/expect/21.2.1/package/package.json written
+137 verbose afterAdd /Users/namgungssi/.npm/dev/0.1.3/package/package.json written
+138 verbose afterAdd /Users/namgungssi/.npm/jest/21.2.1/package/package.json written
+139 silly fetchNamedPackageData inotify
+140 silly mapToRegistry name inotify
+141 silly mapToRegistry using default registry
+142 silly mapToRegistry registry https://registry.npmjs.org/
+143 silly mapToRegistry data Result {
+143 silly mapToRegistry   raw: 'inotify',
+143 silly mapToRegistry   scope: null,
+143 silly mapToRegistry   escapedName: 'inotify',
+143 silly mapToRegistry   name: 'inotify',
+143 silly mapToRegistry   rawSpec: '',
+143 silly mapToRegistry   spec: 'latest',
+143 silly mapToRegistry   type: 'tag' }
+144 silly mapToRegistry uri https://registry.npmjs.org/inotify
+145 verbose request uri https://registry.npmjs.org/inotify
+146 verbose request no auth needed
+147 info attempt registry request try #1 at 12:37:44 PM
+148 verbose etag W/"59b59b07-79fe"
+149 verbose lastModified Sun, 10 Sep 2017 20:05:27 GMT
+150 http request GET https://registry.npmjs.org/inotify
+151 http 304 https://registry.npmjs.org/inotify
+152 verbose headers { date: 'Mon, 06 Nov 2017 20:37:41 GMT',
+152 verbose headers   via: '1.1 varnish',
+152 verbose headers   'cache-control': 'max-age=300',
+152 verbose headers   etag: 'W/"59b59b07-79fe"',
+152 verbose headers   age: '53',
+152 verbose headers   connection: 'keep-alive',
+152 verbose headers   'x-served-by': 'cache-sea1032-SEA',
+152 verbose headers   'x-cache': 'HIT',
+152 verbose headers   'x-cache-hits': '1',
+152 verbose headers   'x-timer': 'S1510000661.075571,VS0,VE0',
+152 verbose headers   vary: 'Accept-Encoding, Accept' }
+153 silly get cb [ 304,
+153 silly get   { date: 'Mon, 06 Nov 2017 20:37:41 GMT',
+153 silly get     via: '1.1 varnish',
+153 silly get     'cache-control': 'max-age=300',
+153 silly get     etag: 'W/"59b59b07-79fe"',
+153 silly get     age: '53',
+153 silly get     connection: 'keep-alive',
+153 silly get     'x-served-by': 'cache-sea1032-SEA',
+153 silly get     'x-cache': 'HIT',
+153 silly get     'x-cache-hits': '1',
+153 silly get     'x-timer': 'S1510000661.075571,VS0,VE0',
+153 silly get     vary: 'Accept-Encoding, Accept' } ]
+154 verbose etag https://registry.npmjs.org/inotify from cache
+155 verbose get saving inotify to /Users/namgungssi/.npm/registry.npmjs.org/inotify/.cache.json
+156 verbose correctMkdir /Users/namgungssi/.npm correctMkdir not in flight; initializing
+157 silly resolveWithNewModule inotify@1.4.2 checking installable status
+158 silly rollbackFailedOptional Starting
+159 silly rollbackFailedOptional Finishing
+160 silly runTopLevelLifecycles Finishing
+161 silly install printInstalled
+162 verbose stack Error: Unsupported platform for inotify@1.4.2: wanted {"name":"inotify","version":"1.4.2","author":{"name":"Camilo Aguilar","email":"camilo.aguilar@gmail.com"},"email":"camilo.aguilar@gmail.com","keywords":["inotify","watch","monitor","watch files","watch directories"],"license":"MIT","description":"inotify bindings for v8 javascript engine","repository":{"type":"git","url":"git+ssh://git@github.com/c4milo/node-inotify.git"},"os":["linux"],"engines":{"node":">=0.8"},"main":"inotify","dependencies":{"bindings":"^1.2.1","nan":"^2.3.3"},"scripts":{"test":"node-gyp configure build","install":"node-gyp rebuild"},"gypfile":true,"contributors":[{"name":"Adrian Estrada","email":"edsadr@gmail.com"},{"name":"Alexander Makarenko","email":"estliberitas@gmail.com"},{"name":"Brian Ingalls","email":"bingalls@compete.com"},{"name":"Brian White","email":"mscdex@mscdex.net"},{"name":"Camilo Aguilar","email":"camilo.aguilar@gmail.com"},{"name":"Dan VerWeire","email":"dverweire@gmail.com"},{"name":"FrozenCow","email":"frozencow@gmail.com"},{"name":"Michael Boe","email":"mschuylerb@gmail.com"},{"name":"Yannick Croissant","email":"k1der.country@free.fr"},{"name":"ikokostya","email":"ikokostya@gmail.com"}],"gitHead":"5feed6dc40be4a5d76ae9d30cf339e4f7d70ae54","bugs":{"url":"https://github.com/c4milo/node-inotify/issues"},"homepage":"https://github.com/c4milo/node-inotify#readme","_id":"inotify@1.4.2","_npmVersion":"5.3.0","_nodeVersion":"8.3.0","_npmUser":{"name":"c4milo","email":"camilo.aguilar@gmail.com"},"maintainers":[{"name":"camilo","email":"camilo@cloudescape.com"},{"name":"c4milo","email":"camilo.aguilar@gmail.com"}],"dist":{"integrity":"sha512-+dq8cO+Um/EiGujOilVGw1AclDq9V4B23z4I+PpytUlgIrWfOG/KxW4k7pRZwHHSoqUzlScCWYuQS8Wa+hYcXg==","shasum":"fd69d0f6e4a55005e338b3c1852fbb81acfb3ccc","tarball":"https://registry.npmjs.org/inotify/-/inotify-1.4.2.tgz"},"_npmOperationalInternal":{"host":"s3://npm-registry-packages","tmp":"tmp/inotify-1.4.2.tgz_1505073926403_0.6098344896454364"},"directories":{},"_from":"inotify@>= 0.1.6","_resolved":"https://registry.npmjs.org/inotify/-/inotify-1.4.2.tgz","_shasum":"fd69d0f6e4a55005e338b3c1852fbb81acfb3ccc","_requested":{"raw":"inotify@>= 0.1.6","scope":null,"escapedName":"inotify","name":"inotify","rawSpec":">= 0.1.6","spec":">=0.1.6","type":"range"},"_spec":"inotify@>= 0.1.6","_where":"/Users/namgungssi/Desktop/401/lab-03-fs-async/node_modules/dev","_args":[[{"raw":"inotify@>= 0.1.6","scope":null,"escapedName":"inotify","name":"inotify","rawSpec":">= 0.1.6","spec":">=0.1.6","type":"range"},"/Users/namgungssi/Desktop/401/lab-03-fs-async/node_modules/dev"]],"readme":"ERROR: No README data found!"} (current: {"os":"darwin","cpu":"x64"})
+162 verbose stack     at checkPlatform (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:45:14)
+162 verbose stack     at thenWarnEngineIssues (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:41:5)
+162 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+162 verbose stack     at checkEngine (/usr/local/lib/node_modules/npm/node_modules/npm-install-checks/index.js:24:10)
+162 verbose stack     at module.exports.isInstallable (/usr/local/lib/node_modules/npm/lib/install/validate-args.js:38:3)
+162 verbose stack     at resolveWithNewModule (/usr/local/lib/node_modules/npm/lib/install/deps.js:511:10)
+162 verbose stack     at /usr/local/lib/node_modules/npm/lib/install/deps.js:454:9
+162 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+162 verbose stack     at /usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:37:12
+162 verbose stack     at addRequestedAndFinish (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:67:5)
+163 verbose pkgid inotify@1.4.2
+164 verbose cwd /Users/namgungssi/Desktop/401/lab-03-fs-async
+165 error Darwin 13.4.0
+166 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "--save" "dev" "jest" "expect"
+167 error node v6.11.5
+168 error npm  v3.10.10
+169 error code EBADPLATFORM
+170 error notsup Unsupported platform for inotify@1.4.2: wanted {"os":"linux","arch":"any"} (current: {"os":"darwin","arch":"x64"})
+171 error notsup Valid OS:    linux
+171 error notsup Valid Arch:  any
+171 error notsup Actual OS:   darwin
+171 error notsup Actual Arch: x64
+172 verbose exit [ 1, true ]
