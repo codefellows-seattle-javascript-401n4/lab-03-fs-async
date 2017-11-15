@@ -1,0 +1,22 @@
+{
+  "name": "lab-03-fs-async",
+  "version": "0.0.1",
+  "description": "lab 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pvl1720/lab-03-fs-async.git"
+  },
+  "keywords": [
+    "lab3"
+  ],
+  "author": "max",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pvl1720/lab-03-fs-async/issues"
+  },
+  "homepage": "https://github.com/pvl1720/lab-03-fs-async#readme"
+}
