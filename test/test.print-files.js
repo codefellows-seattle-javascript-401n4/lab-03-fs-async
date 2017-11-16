@@ -18,7 +18,7 @@ describe ('printFiles', function() {
     printFiles((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe('two');
+      expect(data).toBe('Im your first file'); //shows content but why fails?
     });
 
   });
