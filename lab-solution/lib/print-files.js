@@ -4,25 +4,17 @@
 const fs = require ('fs');
 
 
-let dataArray = [];
-let completed = 0;
-let printFiles = module.exports = function (callback, paths) {
-  if ! (paths instanceof Array)) {
-    return callback (new Error ('error must array'));
-  }
-
-paths.map ((path, index) => {
-  fs.readFile (path, (error, data) => {
-    if (error) {
-      return callback (error);
+let readFile = module.exports = function(callback) {
+  callback = callback || function () {};
+  //is this necessary if I've already invoked callback as function? 
+  fs.readFile(process.argv[2], (err, data) => {
+    if(err) {
+      console.log(err);
+      return callback(err);
     }
 
-    dataArray [index] = data.toString ();
-    completed ++;
 
-    if (completed === paths.length) {
-      callback (null, dataArray);
-    }
-  })
-})
+    console.log(data.toString());
+    callback(null, data.toString());
+  });
 };

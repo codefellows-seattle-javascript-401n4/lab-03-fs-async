@@ -4,10 +4,10 @@
   "description": "hello world",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "scripts": {
-    "test": "jest --verbose"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
