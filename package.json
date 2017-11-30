@@ -9,7 +9,7 @@
     "mocha": "^4.0.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
