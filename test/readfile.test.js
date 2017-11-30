@@ -7,14 +7,14 @@ const readFile = require('/../lib/print-files');
 
 
 
-describe('readFile') => {
+describe('readFile', function() {
   before (function() {
     this.argvBackup = process.argv;
     process.argv = [null, null, __dirname  '/../data/textone.txt'];
 
   });
 
-  after(function ()) => {
+  after(function ()) {
     process.argv = this.argvBackup;
 
   });
