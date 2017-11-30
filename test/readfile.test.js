@@ -3,7 +3,7 @@
 
 
 const expect = require('expect');
-const readFile = require(__dirname  '/../lib/print-files');
+const readFile = require('/../lib/print-files');
 
 
 
