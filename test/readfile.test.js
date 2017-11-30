@@ -1,108 +1,99 @@
 'use strict';
 
-
-
 const expect = require('expect');
-const readFile = require('/../lib/print-files');
+const readFile = require(__dirname + '/../lib/print-files');
 
 
-
-describe('readFile', function() {
-  before (function() {
+describe('readFile', function () {
+  before(function() {
     this.argvBackup = process.argv;
-    process.argv = [null, null, __dirname  '/../data/textone.txt'];
+    process.argv = [null, null, __dirname + '/../data/testone.txt'];
 
   });
 
-  after(function ()) {
+  after(function () {
     process.argv = this.argvBackup;
 
   });
 
-
-  it('should read file from argv', function(done) {
+  it('should read a file from process.argv', function (done) {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-
-      expect(data).toBe('file one');
+      expect(data).toBe('testone');
       done();
     });
+
   });
+
 });
 
-
-
-describe('readFile', function() {
+describe('readFile', function () {
   before(function() {
     this.argvBackup = process.argv;
-    process.argv = [null, null, __dirname  '/..data/texttwo.txt'];
+    process.argv = [null, null, __dirname + '/../data/testwo.txt'];
 
   });
 
-  after(function() {
+  after(function () {
     process.argv = this.argvBackup;
 
   });
 
-
-  it('should read a file from argv', function(done) {
+  it('should read a file from process.argv', function (done) {
     readFile((err, data) => {
-      expect (err).toBe(null);
+      expect(err).toBe(null);
 
-      expect(data).toBe('text file two');
+      expect(data).toBe('testtwo');
       done();
-
     });
+
   });
+
 });
 
-
-
-describe('readFile', function() {
+describe('readFile', function () {
   before(function() {
     this.argvBackup = process.argv;
-    process.argv = [null, null, __dirname  '/../data/textthree.txt'];
+    process.argv = [null, null, __dirname + '/../data/testthree.txt'];
 
   });
 
-
-  after(function() {
+  after(function () {
     process.argv = this.argvBackup;
 
   });
 
-  it('should read a file from argv', function(done) {
+  it('should read a file from process.argv', function (done) {
     readFile((err, data) => {
-      expect (err).toBe(null);
+      expect(err).toBe(null);
 
-      expect(data).toBe('test three text');
+      expect(data).toBe('testthree');
       done();
-
     });
+
   });
+
 });
 
-
-
-desribe('readFile', function() {
+describe('readFile', function () {
   before(function() {
     this.argvBackup = process.argv;
-    process.argv = [null, null, __dirname  '/../data/testfour.txt'];
+    process.argv = [null, null, __dirname + '/../data/testfour.txt'];
 
   });
 
-
-  after(function() {
+  after(function () {
     process.argv = this.argvBackup;
 
   });
 
-  it('should get error', function(done) {
+  it('should read an error since no four', function (done) {
     readFile((err) => {
       expect(err).toBe((err));
       done();
-
     });
+
   });
+
 });
