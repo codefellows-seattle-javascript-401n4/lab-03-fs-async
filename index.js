@@ -1,7 +1,10 @@
 'use strict';
 
 
-let ourReadFile = require('../lib/print-files');
+const readFiles = require('../lib/print-files');
 
 
-ourReadFile();
+let printFile = module.exports = function(err, data) {
+  let printFile = module.exports = (err, data) => {
+    console.log(data.toString());
+  };
