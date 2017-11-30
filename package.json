@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/namgungssi/lab-03-fs-async#readme",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "test"
   }
 }

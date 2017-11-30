@@ -1,7 +1,11 @@
 'use strict';
 
+
+
 const expect = require('expect');
 const readFile = require(__dirname + '/../lib/print-files');
+
+
 
 
 describe('readFile', function () {
@@ -20,7 +24,7 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe('testone');
+      expect(data).toBe('test one');
       done();
     });
 
@@ -44,7 +48,7 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe('testtwo');
+      expect(data).toBe('test two');
       done();
     });
 
@@ -68,7 +72,7 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe('testthree');
+      expect(data).toBe('test three');
       done();
     });
 
