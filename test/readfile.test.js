@@ -24,13 +24,13 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe('test one');
+      expect(data).toBe("test one");
       done();
     });
-
   });
-
 });
+
+
 
 describe('readFile', function () {
   before(function() {
@@ -48,13 +48,14 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe('test two');
+      expect(data).toBe("test two");
       done();
     });
-
   });
-
 });
+
+
+
 
 describe('readFile', function () {
   before(function() {
@@ -72,13 +73,14 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe('test three');
+      expect(data).toBe("test three");
       done();
     });
-
   });
-
 });
+
+
+
 
 describe('readFile', function () {
   before(function() {
@@ -97,7 +99,5 @@ describe('readFile', function () {
       expect(err).toBe((err));
       done();
     });
-
   });
-
 });
