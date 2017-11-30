@@ -3,14 +3,14 @@
 
 
 const expect = require('expect');
-const readFile = require(__dirname + '/../lib/print-files');
+const readFile = require(__dirname  '/../lib/print-files');
 
 
 
 describe('readFile') => {
   before (function() {
     this.argvBackup = process.argv;
-    process.argv = [null, null, __dirname + '/../data/textone.txt'];
+    process.argv = [null, null, __dirname  '/../data/textone.txt'];
 
   });
 
@@ -36,7 +36,7 @@ describe('readFile') => {
 describe('readFile', function() {
   before(function() {
     this.argvBackup = process.argv;
-    process.argv = [null, null, __dirname + '/..data/texttwo.txt'];
+    process.argv = [null, null, __dirname  '/..data/texttwo.txt'];
 
   });
 
@@ -62,7 +62,7 @@ describe('readFile', function() {
 describe('readFile', function() {
   before(function() {
     this.argvBackup = process.argv;
-    process.argv = [null, null, __dirname + '/../data/textthree.txt'];
+    process.argv = [null, null, __dirname  '/../data/textthree.txt'];
 
   });
 
@@ -88,7 +88,7 @@ describe('readFile', function() {
 desribe('readFile', function() {
   before(function() {
     this.argvBackup = process.argv;
-    process.argv = [null, null, __dirname + '/../data/testfour.txt'];
+    process.argv = [null, null, __dirname  '/../data/testfour.txt'];
 
   });
 
