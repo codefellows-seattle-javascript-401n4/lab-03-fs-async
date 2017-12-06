@@ -24,7 +24,7 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe("test one");
+      expect(data).toBe("test one\n");
       done();
     });
   });
@@ -48,7 +48,7 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe("test two");
+      expect(data).toBe("test two\n");
       done();
     });
   });
@@ -73,7 +73,7 @@ describe('readFile', function () {
     readFile((err, data) => {
       expect(err).toBe(null);
 
-      expect(data).toBe("test three");
+      expect(data).toBe("test three\n");
       done();
     });
   });
