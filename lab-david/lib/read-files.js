@@ -1,15 +1,12 @@
 'use strict';
 
 const fs = require('fs');
-const errorHandler = require('./errorHandler.js');
 
-module.exports = (path) => {
-    return new Promise((resolve) => {
-
-        fs.readFile(__dirname + path, 'utf-8', (err, data) => {
-            if (err) errorHandler(err);
+module.exports = (file) => {
+    return new Promise((resolve, reject) => {
+        fs.readFile(`${__dirname}/${file}.js`, 'utf-8', (err, data) => {
+            if (err) reject('Error Reading File');
             resolve(data);
         });
-
     });
-};
+}
